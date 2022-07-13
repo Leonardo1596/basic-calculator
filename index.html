@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+
+   
+<!-- <div class="toggle-container">
+    <div>
+        <label class="toggle toggle-yes">1</label>
+        <label class="toggle toggle-yes">2</label>
+        <label class="toggle toggle-yes">3</label>
+    </div>
+    <div class="tw-toggle">
+        <input type="radio" name="toggle" value="false">
+        <label class="toggle toggle-yes"><i class="fa fa-times"></i></label>
+        <input checked type="radio" name="toggle" value="-1">
+        <label class="toggle toggle-yes"><i class="fa fa-minus"></i></label>
+        <input type="radio" name="toggle" value="true">
+        <label class="toggle toggle-yes"><i class="fa fa-check"></i></label>
+        <span></span>  
+    </div>
+
+</div> -->
+
+
+
+    <div class="container">
+        <div class="center">
+            <div class="title-theme">
+                <span id="calc">calc</span>
+                <span></span>
+            </div>
+
+            <div class="display">
+                <input type="text" id="display" placeholder="0" pattern="[0-9]+">
+            </div>
+
+
+            <div class="keys">
+                <div class="buttons">
+                    <button class="btn btn-white" onclick="clickButtons('7')">7</button>
+                    <button class="btn btn-white" onclick="clickButtons('8')">8</button>
+                    <button class="btn btn-white" onclick="clickButtons('9')">9</button>
+                    <button class="btn btn-purple" onclick="del()" id="del">DEL</button>
+                    <button class="btn btn-white" onclick="clickButtons('4')">4</button>
+                    <button class="btn btn-white" onclick="clickButtons('5')">5</button>
+                    <button class="btn btn-white" onclick="clickButtons('6')">6</button>
+                    <button class="btn btn-white" onclick="operation('+')">+</button>
+                    <button class="btn btn-white" onclick="clickButtons('1')">1</button>
+                    <button class="btn btn-white" onclick="clickButtons('2')">2</button>
+                    <button class="btn btn-white" onclick="clickButtons('3')">3</button>
+                    <button class="btn btn-white" onclick="operation('-')">-</button>
+                    <button class="btn btn-white" onclick="clickButtons('.')">.</button>
+                    <button class="btn btn-white" onclick="clickButtons('0')">0</button>
+                    <button class="btn btn-white" onclick="operation('/')">/</button>
+                    <button class="btn btn-white" onclick="operation('x')">x</button>
+
+            </div>
+                <div class="reset-equal">
+                    <button class="btn btn-purple" id="reset" onclick="reset()">RESET</button>
+                    <button class="btn btn-red" id="equal" onclick="result()">=</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/js/calculator-app.js"></script>
+</body>
+
+</html>

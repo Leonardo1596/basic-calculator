@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Mono:wght@700&display=swap');
+
+
+
+.tw-toggle {
+    /* background: #95A5A6; */
+    display: inline-block;
+    padding: 2px 3px;
+    border-radius: 20px;
+    position:relative;
+    border: 2px solid #95A5A6;
+  }
+  
+  .tw-toggle label {
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    color: #95A5A6;
+    position:relative;
+    z-index:2;
+    margin: 0;
+    text-align: center;
+    padding: 2px 3px;
+    font-size: 15px;
+    /* cursor: pointer; */
+  }
+  
+  .tw-toggle input {
+    /* display: none; */
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .tw-toggle span {
+    height: 21px;
+    width: 21px;
+    line-height: 21px;
+    border-radius: 50%;
+    background:#fff;
+    display:block;
+    position:absolute;
+    left: 22px;
+    top: 2px;
+    transition:all 0.3s ease-in-out;
+  }
+  
+  .tw-toggle input[value="false"]:checked ~ span{
+    background:#e74c3c;
+    left:2px;
+    color:#fff;
+  }
+  
+  .tw-toggle input[value="true"]:checked ~ span{
+    background:#27ae60;
+    left: 46px;
+  }
+  .tw-toggle input[value="-1"]:checked ~ span{
+    background:#95A5A6;
+    left: 23px;
+  }
+  
+  .tw-toggle input[value="false"]:checked + label,.tw-toggle input[value="true"]:checked + label{
+    color:#fff;
+  }
+  .tw-toggle input[value="-1"]:checked + label{
+    color:#fff;
+  }
+  
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(222, 26%, 31%);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.center {
+    width: 550px;
+    height: 550px;
+    margin: auto;
+
+}
+
+.title-theme {
+    margin-bottom: 30px;
+}
+
+#calc {
+    margin-left: 5px;
+    color: white;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.display {
+    margin-bottom: 20px;
+    
+}
+
+#display {
+    background-color: hsl(224, 36%, 15%);
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    height: 130px;
+    width: 520px;
+    border: none;
+    outline: none;
+    text-align: right;
+    border-radius: 9px;
+    padding-right: 30px;
+    caret-color: transparent;
+    
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0;
+}
+
+.keys {
+    background-color: hsl(223, 31%, 20%);
+    padding: 10px 20px 20px 20px;
+    border-radius: 9px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+    width: 105px;
+    height: 70px;
+    font-weight: 700;
+    margin: auto;
+    border-bottom: 4px solid hsl(28, 16%, 65%);
+    border-radius: 13px;
+    font-size: 38px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'League Spartan', sans-serif;
+    outline: none;
+    
+}
+
+.reset-equal {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn-purple {
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    font-size: 26px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+
+}
+
+.btn-red {
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+    font-size: 26px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+
+#reset {
+    width: 50%;
+    margin-right: 20px;
+
+}
+
+#equal {
+    width: 50%;
+    border-bottom: 4px solid hsl(6, 70%, 34%);
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .center {
+        width: 85%;
+        height: 98%;
+        margin: auto;
+    }
+
+    .title-theme {
+        margin-top: 30px;
+    }
+
+    #calc {
+        font-size: 40px;
+    }
+
+    .display {
+        margin-bottom: 20px;
+    }
+
+    #display {
+        width: 91%;
+        height: 85px;
+        margin-bottom: 7px;
+    }
+
+
+    .keys {
+        height: 61%;
+    }
+
+    .buttons {
+        width: 100%;
+        height: 80%;
+        /* margin: auto; */
+    }
+
+    .btn {
+        width: 93%;
+        height: 84%;
+        border-radius: 8px;
+    }
+
+    .btn-purple {
+        font-size: 22px;
+    }
+
+    .reset-equal {
+        height: 20%;
+    }
+
+    #reset {
+        margin-top: 23px;
+        margin-left: -5px;
+        width: 133px;
+        height: 62px;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    #equal {
+        margin-top: 23px;
+        margin-right: -5px;
+        margin-left: 15px;
+        width: 133px;
+        height: 62px;
+        padding: 0;
+        font-size: 22px;
+    }
+
+}
